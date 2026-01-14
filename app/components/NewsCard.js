@@ -5,7 +5,7 @@ export default function NewsCard({repo}) {
         <div className="card">
             <h2>{repo.name}</h2>
             <p>{repo.description}</p>
-            <span>Stars: {repo.stargazers_count}</span>
+            <span>⭐ {repo.stargazers_count}</span>
         </div>
     );
 }
