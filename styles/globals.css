@@ -3,38 +3,75 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f5f5f7;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
     color: #1d1d1f;
     padding: 40px;
 }
-
 h1 {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgb(248, 248, 248);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
-
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
 .card {
-    background: white;
+    background: rgb(245, 243, 243);
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin-bottom: 16px;
+    width: 690px;
 }
-
 .card h2 {
     font-size: 18px;
     margin-bottom: 8px;
 }
-
 .card p {
     color: #6e6e73;
     margin-bottom: 12px;
 }
-
 .card span {
     font-size: 14px;
     color: #1d1d1f;
+}
+.card-wrapper button {
+    width: 100px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #007aff;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: center;
+}
+.card-wrapper button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+.summary {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 14px;
 }

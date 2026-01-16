@@ -15,7 +15,7 @@ export default function Home() {
 
     return (
         <main>
-            <h1>AI Trends</h1>
+            <h1>The Latest AI Trends</h1>
             {repos.map(repo => (
                 <NewsCard key={repo.id} repo={repo} />
             ))}
