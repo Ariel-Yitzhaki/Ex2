@@ -1,6 +1,7 @@
 // Runs in the browser, needed for useState, useEffect and LocalStorage
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Settings() {
     const [apiKey, setApiKey] = useState("");
@@ -26,9 +27,14 @@ export default function Settings() {
 
     return (
         <main>
-            <h1>Settings</h1>
+            <h1>
+                Settings
+                <Link href="/">
+                    <button className="settings-btn">Back</button>
+                </Link> 
+            </h1>
             <form className="card" onSubmit={handleSave}>
-                <label>API Key (Groq/OpenAI/Anthropic)</label>
+                <label>API Key ( Groq / OpenAI / Anthropic ) </label>
                 <input
                     // Hides the key as dots
                     type="password"

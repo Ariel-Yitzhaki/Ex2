@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import NewsCard from "./components/NewsCard";
 
 // Fetches repos from our API when page loads, stores them in state, and renders a NewsCard for each
@@ -15,7 +16,12 @@ export default function Home() {
 
     return (
         <main>
-            <h1>The Latest AI Trends</h1>
+            <h1>
+                The Latest AI Trends
+            <Link href="/settings">
+                <button className="settings-btn">Settings</button>
+            </Link>
+            </h1>
             {repos.map(repo => (
                 <NewsCard key={repo.id} repo={repo} />
             ))}
