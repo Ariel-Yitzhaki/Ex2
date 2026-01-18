@@ -27,6 +27,12 @@ export default function NewsCard({repo}) {
         
         // Gets the summary from the response, updates state, and stops loading
         const data = await response.json();
+        console.log("Received data:", data);
+        if (data.error) {
+            alert("Error: " + data.error);
+            setLoading(false);
+            return;
+        }
         setSummary(data.summary);
         setLoading(false);
     }
