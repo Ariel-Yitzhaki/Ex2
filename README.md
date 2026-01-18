@@ -21,6 +21,11 @@ https://ex2-eosin.vercel.app/
 - **AI Provider:** Groq (Llama 3.1)
 - **Deployment:** Vercel
 
+## APIs Used
+
+- **GitHub API** - Fetches trending repositories
+- **Groq API** - Generates AI summaries
+- 
 ## API Routes
 
 | Route | Method | Description |
