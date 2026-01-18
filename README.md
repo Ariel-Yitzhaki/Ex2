@@ -38,4 +38,4 @@ https://ex2-eosin.vercel.app/
 
 ## Author
 
-[Your Name]
+Ariel Yitzhaki
