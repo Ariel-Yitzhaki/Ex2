@@ -1,6 +1,6 @@
 export async function POST(request) {
     // Get the description and API key from the request
-    const { description, apiKey } = await request.json();
+    const { description, name, apiKey } = await request.json();
 
     // Handle empty descriptions
     if (!description) {
@@ -17,8 +17,12 @@ export async function POST(request) {
             model: "llama-3.1-8b-instant",
             messages: [
                 {
+                    role: "system",
+                    content: "You explain GitHub projects in plain English in up to 3 lines. Be direct and concise. Never mention that you're summarizing or that information is limited. Just explain what the project does based on what you know."
+                },
+                {
                     role: "user",
-                    content: `Summarize this project in 2-3 short sentences: ${description}`
+                    content: `Project: ${name}\nDescription: ${description}`
                 }
             ],
             max_tokens: 100
@@ -31,6 +35,7 @@ export async function POST(request) {
     if (data.error) {
         return Response.json({ error: data.error.message }, { status: 400 });
     }
+
     const summary = data.choices[0].message.content;
 
     return Response.json({ summary });

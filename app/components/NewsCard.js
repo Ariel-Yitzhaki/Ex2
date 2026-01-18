@@ -21,6 +21,7 @@ export default function NewsCard({repo}) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 description: repo.description,
+                name: repo.name,
                 apiKey: apiKey
             })
         });
@@ -46,7 +47,7 @@ export default function NewsCard({repo}) {
                 <span>⭐ {repo.stargazers_count}</span>
             </div>
             {/* Summarize button, disabled while loading and switches to "Summarizing..." */}
-            <button onClick={handleSummarize} disabled={loading}> 
+            <button onClick={handleSummarize} disabled={loading || summary}> 
                 {loading ? "Summarizing..." : "Summarize"}
             </button>
             {/* only show if summary has a value */}
