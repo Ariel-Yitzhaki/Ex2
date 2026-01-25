@@ -34,7 +34,7 @@ export default function Settings() {
                 </Link> 
             </h1>
             <form className="card" onSubmit={handleSave}>
-                <label>API Key ( Groq / OpenAI / Anthropic ) </label>
+                <label>API Key ( Groq ) </label>
                 <input
                     // Hides the key as dots
                     type="password"
