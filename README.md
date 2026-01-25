@@ -25,7 +25,7 @@ https://ex2-eosin.vercel.app/
 
 - **GitHub API** - Fetches trending repositories
 - **Groq API** - Generates AI summaries
-- 
+  
 ## API Routes
 
 | Route | Method | Description |
