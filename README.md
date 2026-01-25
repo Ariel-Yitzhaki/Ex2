@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI News Aggregator
 
-## Getting Started
+A web application that displays trending AI/ML projects from GitHub with AI-powered summaries.
 
-First, run the development server:
+## Live Website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://ex2-eosin.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Displays trending AI/ML GitHub repositories from the last 24 hours
+- AI-powered project summaries using Groq API
+- Settings page to save your API key
+- 5-minute caching to avoid API rate limits
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- **Framework:** Next.js
+- **Frontend:** React
+- **Styling:** Vanilla CSS
+- **AI Provider:** Groq (Llama 3.1)
+- **Deployment:** Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## APIs Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **GitHub API** - Fetches trending repositories
+- **Groq API** - Generates AI summaries
+- 
+## API Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/github` | GET | Fetches trending AI/ML repos from GitHub |
+| `/api/summarize` | POST | Sends project description to Groq for summary |
 
-## Deploy on Vercel
+## Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm run dev`
+4. Open http://localhost:3000
+5. Add your Groq API key in Settings (get one free at https://console.groq.com/keys)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+Ariel Yitzhaki
